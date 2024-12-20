@@ -12,6 +12,7 @@ body{
     font-style: normal;
 }
 .navbar{
+    width: 100%;
     display: flex;
     color: black;
     align-items: center;
@@ -19,6 +20,11 @@ body{
     padding: 40px 50px 10px 50px ;
     font-size: small;
     border-bottom: 1px solid gainsboro;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 9999;
 }
 .navbar h1{
     letter-spacing: 8px;
@@ -133,11 +139,20 @@ body{
    text-align: center;
    line-height: 35px;
 }
+.filter{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 0px;
+
+}
 .carts{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center; 
+    flex-direction:column ;
 }
 .carts1{
     width: 80%;
@@ -155,11 +170,44 @@ body{
 .cartsinner{
     width: 100%;
     height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.cartsinner button{
+    padding: 5px 0px;
+    font-size: 10px;
+    position: absolute;
+    bottom: -100%;
+    left: 100px;
+    transition: 0.5s;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    border-radius: 3px;
+}
+.cartsouter:hover .cartsinner button{
+    bottom: 0;
+}
+.cartsinner button span{
+    height: 100%;
+    padding: 5px;
+    background-color: gray;
+    border-radius: 3px;
+}
+.cartsinner p{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: small;
+    color: #6b6b6b;
 }
 .cartsinner img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.cp{
+    left: 20px;
 }
 .cartscontent{
     width: 100%;
