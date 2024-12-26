@@ -117,7 +117,7 @@ body{
 }
 .imcontent{
     display: flex;
-    align-items: flex-start
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     padding: 10px;
