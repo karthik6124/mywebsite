@@ -654,7 +654,7 @@ body{
         color: black;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 20px 10px 20px ;
+        padding: 20px 20px 20px 20px ;
         font-size: small;
         border-bottom: 1px solid gainsboro;
         position: fixed;
@@ -803,8 +803,8 @@ body{
         align-items: flex-start;
         justify-content:flex-start;
         grid-template-columns: repeat(5,60%); 
-       overflow: hidden;
-       overflow-x: scroll;
+        overflow: hidden;
+        overflow-x: scroll;
     }
     .posterinner img{
         width: 100px;
