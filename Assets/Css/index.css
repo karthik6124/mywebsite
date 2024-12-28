@@ -26,6 +26,12 @@ body{
     background-color: white;
     z-index: 9999;
 }
+.burger{
+    display: none;
+}
+#check{
+    display: none;
+}
 .navbar h1{
     letter-spacing: 8px;
 }
@@ -310,7 +316,6 @@ body{
 .bottomfooter p{
     font-size: 12px;
 }
-
 
 
 @media screen and (max-width:1200px){
@@ -644,11 +649,12 @@ body{
     }
     .navbar{
         width: 100%;
+        height: 100px;
         display: flex;
         color: black;
         align-items: center;
         justify-content: space-between;
-        padding: 40px 50px 10px 50px ;
+        padding: 20px 20px 10px 20px ;
         font-size: small;
         border-bottom: 1px solid gainsboro;
         position: fixed;
@@ -656,7 +662,6 @@ body{
         left: 0;
         background-color: white;
         z-index: 9999;
-        display: none;
     }
     .navbar h1{
         letter-spacing: 8px;
@@ -664,20 +669,41 @@ body{
     .icons{
         display: flex;
         gap: 25px;
+        display: none;
+    }
+    .burger{
+        font-size: 30px;
+        display: block;
     }
     .navinner{
+        width: 100%;
+        height: auto;
         display: flex;
         font-size: small;
         align-items: center;
         justify-content: space-between;
+        flex-direction: column;
         gap: 40px;
+        position: absolute;
+        top: 100px;
+        left: -100%;
+        transition: 1s;
+    }
+    .navbar input{
+        display: none;
+    }
+    .navbar #check:checked~.navinner{
+        left: 0;
     }
     .navinner  ul{
-        width: 50%;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-direction: column;
         gap: 40px;
+        background-color: gray;
+
     }
     .navinner ul li{
         list-style: none;
@@ -694,7 +720,7 @@ body{
         align-items: center;
         justify-content:center;
         padding: 20px;
-        background-color: yellow;
+        margin-top: 100px;
     }
     .contentinner{
         width: 100%;
@@ -703,7 +729,6 @@ body{
         align-items: center;
         justify-content: space-between;
         flex-direction: column-reverse;
-        background-color: red;
     }
     .left{
         width: 100%;
@@ -713,7 +738,6 @@ body{
         justify-content:center;
         flex-direction: column;
         gap: 25px;
-       background-color: gray; 
     }
     .left h2{
         width: 100%;
@@ -771,7 +795,6 @@ body{
         padding: 20px;
         justify-content: center;
         align-items: center;
-        background-color: red;
     }
     .posterinner{
         width: 100%;
@@ -780,7 +803,6 @@ body{
         align-items: flex-start;
         justify-content:flex-start;
         grid-template-columns: repeat(5,60%); 
-       background-color: yellow; 
        overflow: hidden;
        overflow-x: scroll;
     }
@@ -799,21 +821,18 @@ body{
         justify-content: center;
         gap: 30px;
         color: gray;
-        background-color: blue;
     }
     .belowpostercontent{
         width: 100%;
         display: flex;
         align-items: start;
         justify-content: center;
-        background-color: green;
     }
     .belowpostercontent p{
         width: 100%;
        font-size: 22px; 
        text-align: justify;
        line-height: 35px;
-       background-color: #6b6b6b;
     }
     .filter{
         width: 80%;
@@ -824,17 +843,18 @@ body{
     
     }
     .carts{
-        width: 100%;
+        width: auto;
+        padding: 20px;
         display: flex;
         align-items: center;
         justify-content: center; 
         flex-direction:column ;
     }
     .carts1{
-        width: 80%;
+        width: 100%;
         height: 100%;
         display: grid;
-        grid-template-columns: repeat(4,2fr);
+        grid-template-columns: repeat(1,2fr);
         grid-gap: 20px;
     
     }
@@ -854,7 +874,7 @@ body{
         font-size: 10px;
         position: absolute;
         bottom: -100%;
-        left: 100px;
+        left: 150px;
         transition: 0.5s;
         background-color: black;
         color: whitesmoke;
@@ -909,8 +929,9 @@ body{
         margin-right: 8px;
     }
     .footer{
-        width: 100%;
-        height: 50%;
+        width: auto;
+        height:auto;
+        padding: 20px;
         background-color: black;
         color: white;
         display: flex;
@@ -918,11 +939,12 @@ body{
         justify-content: center;
     }
     .footerinner{
-        width: 80%;
+        width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        flex-direction: column;
         gap: 20px;
     }
     .footercontent{
