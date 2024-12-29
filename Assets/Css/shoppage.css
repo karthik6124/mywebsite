@@ -26,6 +26,12 @@ body{
     background-color: white;
     z-index: 9999;
 }
+.navbar label{
+    display: none;
+}
+#check{
+    display: none;
+}
 .navbar h1{
     letter-spacing: 8px;
 }
@@ -277,4 +283,318 @@ body{
 }
 .bottomfooter p{
     font-size: 12px;
+}
+
+
+@media screen and (max-width:768px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+        font-family: "Catamaran", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    .navbar{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        color: black;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 20px 20px ;
+        font-size: small;
+        border-bottom: 1px solid gainsboro;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        z-index: 9999;
+    }
+    .navbar h1{
+        letter-spacing: 8px;
+    }
+    .icons{
+        display: flex;
+        gap: 25px;
+        display: none;
+    }
+    .navbar label{
+        font-size: 30px;
+        display: block;
+    }
+    .navinner{
+        width: 100%;
+        height: auto;
+        display: flex;
+        font-size: small;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 40px;
+        position: absolute;
+        top: 100px;
+        left: -100%;
+        transition: 1s;
+    }
+    .navbar input{
+        display: none;
+    }
+    .navbar #check:checked~.navinner{
+        left: 0;
+    }
+    .navinner  ul{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 40px;
+        background-color: gray;
+
+    }
+    .navinner ul li{
+        list-style: none;
+    }
+    .navbar a{
+        color: #363636;
+        text-decoration: none;
+    }
+    .belownavbar{
+        width: auto;
+        height: 15%;
+        margin-top: 100px;
+        color: #979caa;
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .sidecontent{
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between; 
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .ch{
+        width: 100%;
+        height: 100%;
+        padding-right: 10px;
+    }
+    .uppercontent{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 20px;
+        padding-right: 40px;
+        color:#bbc4ce;
+    }
+    .color{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding-left: 15px;
+    }
+    .color ul li{
+        list-style: none;
+        color: #a09aae;
+        font-size: 15px;
+    }
+    .color h5{
+        color: #3a4355;
+    }
+    .carts{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        flex-direction:column;
+    }
+    .carts1{
+        width: 100%;
+        height: auto;
+        display: flex;
+        display: grid;
+        grid-template-columns: repeat(1,2fr);
+        grid-gap: 20px;
+    
+    }
+    .cartsouter{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .cartsinner{
+        width: 100%;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+    }
+    .cartsinner button{
+        padding: 5px 0px;
+        font-size: 10px;
+        position: absolute;
+        bottom: -100%;
+        left: 100px;
+        transition: 0.5s;
+        background-color: black;
+        color: whitesmoke;
+        border: none;
+        border-radius: 3px;
+    }
+    .cartsouter:hover .cartsinner button{
+        bottom: 0;
+    }
+    .cartsinner button span{
+        height: 100%;
+        padding: 5px;
+        background-color: gray;
+        border-radius: 3px;
+    }
+    .cartsinner p{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: small;
+        color: #6b6b6b;
+    }
+    .cartsinner img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .cp{
+        left: 20px;
+    }
+    .cartscontent{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        flex-direction: column;
+    }
+    .cartscontent h4{
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 3px;
+    }
+    .cartscontent img{
+        width: 50px;
+        object-fit: contain;
+    }
+    .cartscontent p{
+        color: #adadad;
+    }
+    .cartscontent p del{
+        margin-right: 8px;
+    }
+    .slide{
+        width: 200px;
+        display: grid;
+        grid-template-columns: repeat(2,100%);
+        overflow: hidden;
+    }
+    .s1{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 15px;
+        transition: 0.5s;
+    }
+    .s2{
+        width: 100%;
+        height: 100%;   
+        font-size: 15px;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .cartsouter:hover .s1{
+        transform: translateX(-100%);
+    }
+    .cartsouter:hover .s2{
+        transform: translateX(-100%);
+    }
+    .pagenumbers{
+        width: auto;
+        display: flex;
+        align-items:flex-start;
+        justify-content: flex-end;
+    }
+    .pagenumbers ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        padding: 40px;
+        color: #b4b5c0;
+        font-size: 15px;
+    }
+    .pagenumbers ul li{
+        list-style: none;
+    }
+    .footer{
+        width: auto;
+        padding: 20px;
+        height: auto;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footerinner{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footercontent{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .footercontent h5{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .footerparagraph{
+        line-height: 25px;
+    }
+    .footerparagraph p{
+        font-size: 14px;
+        font-weight: lighter;
+    }
+    .bottomfooter{
+        width: auto;
+        height: auto;
+        color: white;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        border-top: 1px solid rgb(63, 55, 55);
+    }
+    .bottomfooter p{
+        font-size: 12px;
+    }
 }
